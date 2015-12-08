@@ -64,30 +64,39 @@
             </div>
             <nav class="header-menu">
                 <ul>
-                    <li><a href="./?no_spa=<?php echo e_url("home.php") ?>">HOME</a></li>
                     <li><a href="./?no_spa=<?php echo e_url("about.php") ?>">ABOUT</a></li>
+					<li><a href="./?no_spa=<?php echo e_url("contact.php") ?>">CONTACT</a></li>
                     <li class="sub"><a href="#">FURNITURE</a>
                         <ul>
-                            <li><a href="works-detail-1.html">ANTIQUE</a></li>
-                            <li><a href="works-detail-1.html">CLASSIC</a></li>
-                            <li><a href="works-detail-1.html">GARDEN</a></li>
-                            <li><a href="works-detail-1.html">MINIMALIS</a></li>
+                            <li><a href="#">MODERN COLLECTIONS</a></li>
+                            <li><a href="#">CRAFT COLLECTIONS</a></li>
+                            <li><a href="#">RECYCLE PINE - WHITE</a></li>
+                            <li><a href="#">RECYCLE PINE - IRON</a></li>
+                            <li><a href="#">RECYCLE PINE - GRAY</a></li>
+                            <li><a href="#">CLASSIC COLECTION - CING</a></li>
+                            <li><a href="#">CLASSIC COLECTION - MING</a></li>
                         </ul>
                     </li>
-                    <li class="sub"><a href="#">INTERIOR DESIGN</a>
+                    <li class="sub"><a href="#">DESIGN PROJECT</a>
                         <ul>
-                            <li><a href="works-detail-2.html">BATH ROOM</a></li>
-                            <li><a href="works-detail-2.html">CAFE</a></li>
-                            <li><a href="works-detail-2.html">HOSPITAL</a></li>
-                            <li><a href="works-detail-2.html">HOTEL</a></li>
-                            <li><a href="works-detail-2.html">KIDS ROOM</a></li>
-                            <li><a href="works-detail-2.html">KITCHEN SET</a></li>
-                            <li><a href="works-detail-2.html">LIVING ROOM</a></li>
-                            <li><a href="works-detail-2.html">MASTER BED</a></li>
-                            <li><a href="works-detail-2.html">OFFICE</a></li>
+                            <li><a href="#">HOME - BEDROOM</a></li>
+                            <li><a href="#">HOME - KITCHEN SET</a></li>
+                            <li><a href="#">HOME - LIVING AND FAMILY</a></li>
+                            <li><a href="#">HOME - OTHERS</a></li>
+                            <li><a href="#">HOTEL</a></li>
+                            <li><a href="#">OFFICE</a></li>
                         </ul>
                     </li>
-                    <li><a href="contact-1.html">CONTACT</a></li>
+					<li class="sub"><a href="#">INTERIOR IDEAS</a>
+                        <ul>
+                            <li><a href="#">HOME - BEDROOM</a></li>
+                            <li><a href="#">HOME - KITCHEN SET</a></li>
+                            <li><a href="#">HOME - LIVING AND FAMILY</a></li>
+                            <li><a href="#">HOME - KIDS AND YOUTH</a></li>
+                            <li><a href="#">CAFE AND RESTO</a></li>
+                            <li><a href="#">OFFICE</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </div>

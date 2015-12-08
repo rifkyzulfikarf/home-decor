@@ -158,28 +158,28 @@ $(document).ready(function(e){
 	e(".google-map-1").width("100%").height("330px").gmap3({
 		map:{
 			options:{
-				center:[-7.020125, 110.419518],
+				center:[-7.011579, 110.407499],
 				zoom:15,
 				scrollwheel:false,
 				mapTypeId:google.maps.MapTypeId.ROADMAP
 			}
 		},
 		marker:{
-			latLng:[-7.020125, 110.419518]
+			latLng:[-7.011579, 110.407499]
 		}
 	});
 	
 	e(".google-map-2").width("100%").height("614px").gmap3({
 		map:{
 			options:{
-				center:[-7.020125, 110.419518],
+				center:[-7.011579, 110.407499],
 				zoom:15,
 				scrollwheel:false,
 				mapTypeId:google.maps.MapTypeId.ROADMAP
 			}
 		},
 		marker:{
-			latLng:[-7.020125, 110.419518]
+			latLng:[-7.011579, 110.407499]
 		}
 	});
 	
