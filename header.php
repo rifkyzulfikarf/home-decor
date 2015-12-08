@@ -1,3 +1,6 @@
+<?php
+	$data = new koneksi();
+?>
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -66,37 +69,21 @@
                 <ul>
                     <li><a href="./?no_spa=<?php echo e_url("about.php") ?>">ABOUT</a></li>
 					<li><a href="./?no_spa=<?php echo e_url("contact.php") ?>">CONTACT</a></li>
-                    <li class="sub"><a href="#">FURNITURE</a>
-                        <ul>
-                            <li><a href="#">MODERN COLLECTIONS</a></li>
-                            <li><a href="#">CRAFT COLLECTIONS</a></li>
-                            <li><a href="#">RECYCLE PINE - WHITE</a></li>
-                            <li><a href="#">RECYCLE PINE - IRON</a></li>
-                            <li><a href="#">RECYCLE PINE - GRAY</a></li>
-                            <li><a href="#">CLASSIC COLECTION - CING</a></li>
-                            <li><a href="#">CLASSIC COLECTION - MING</a></li>
-                        </ul>
-                    </li>
-                    <li class="sub"><a href="#">DESIGN PROJECT</a>
-                        <ul>
-                            <li><a href="#">HOME - BEDROOM</a></li>
-                            <li><a href="#">HOME - KITCHEN SET</a></li>
-                            <li><a href="#">HOME - LIVING AND FAMILY</a></li>
-                            <li><a href="#">HOME - OTHERS</a></li>
-                            <li><a href="#">HOTEL</a></li>
-                            <li><a href="#">OFFICE</a></li>
-                        </ul>
-                    </li>
-					<li class="sub"><a href="#">INTERIOR IDEAS</a>
-                        <ul>
-                            <li><a href="#">HOME - BEDROOM</a></li>
-                            <li><a href="#">HOME - KITCHEN SET</a></li>
-                            <li><a href="#">HOME - LIVING AND FAMILY</a></li>
-                            <li><a href="#">HOME - KIDS AND YOUTH</a></li>
-                            <li><a href="#">CAFE AND RESTO</a></li>
-                            <li><a href="#">OFFICE</a></li>
-                        </ul>
-                    </li>
+					<?php
+						$qMenu = "SELECT id, nama FROM menu_public WHERE hapus = '0';";
+						if ($resMenu = $data->runQuery($qMenu)) {
+							while ($rsMenu = $resMenu->fetch_array()) {
+								echo "<li class='sub'><a href='#'>".$rsMenu['nama']."</a><ul>";
+								$qKat = "SELECT id, nama FROM kategori WHERE id_menu = '".$rsMenu['id']."' AND hapus = '0';";
+								if ($resKat = $data->runQuery($qKat)) {
+									while ($rsKat = $resKat->fetch_array()) {
+										echo "<li><a href='./?no_spa=".e_url('product.php')."&kat=".e_url($rsKat['nama'])."&id=".e_url($rsKat['id'])."'>".$rsKat['nama']."</a></li>";
+									}
+								}
+								echo "</ul></li>";
+							}
+						}
+					?>
                 </ul>
             </nav>
         </div>
