@@ -24,14 +24,14 @@
             <!-- Work Header End -->
             
 			<?php
-			$qImg = "SELECT nama FROM img WHERE id_kategori = '".d_url($_GET['id'])."';";
+			$qImg = "SELECT nama, deskripsi FROM img WHERE id_kategori = '".d_url($_GET['id'])."';";
 			if ($resImg = $data->runQuery($qImg)) {
 				while ($rsImg = $resImg->fetch_array()) {
 			?>
 					<div class="item col-md-4">
-						<a href="assets/img/<?php echo $rsImg['nama'] ?>" class="block" data-rel="prettyPhoto[pp_gal]" title="Photo Name">
+						<a href="assets/img/<?php echo $rsImg['nama'] ?>" class="block" data-rel="prettyPhoto[pp_gal]" title="<?php echo $rsImg['deskripsi'] ?>">
 							<div class="over-image">
-								<img src="assets/img/<?php echo $rsImg['nama'] ?>" alt="Photo Name">
+								<img src="assets/img/<?php echo $rsImg['nama'] ?>" alt="<?php echo $rsImg['deskripsi'] ?>">
 							</div>
 						</a>
 					</div>
