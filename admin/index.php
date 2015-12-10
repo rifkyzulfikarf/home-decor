@@ -56,6 +56,7 @@
 					<script src="js/jquery.number.min.js" type="text/javascript"></script>
 					<script src="js/jquery.print.js" type="text/javascript"></script>
 					<script src="js/chosen.jquery.min.js" type="text/javascript"></script>
+					<script src="js/dropzone.min.js" type="text/javascript"></script>
 					<script type="text/javascript" language="javascript" src="assets/advanced-datatable/media/js/jquery.dataTables.js"></script>
 					<script type="text/javascript" language="javascript" src="assets/advanced-datatable/extras/dataTables.fnReloadAjax.js"></script>
 					<script type="text/javascript" src="assets/data-tables/DT_bootstrap.js"></script>
