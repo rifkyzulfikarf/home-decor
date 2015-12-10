@@ -581,7 +581,8 @@
         position: relative
     }
     .site-header .header-top .header-menu>ul>li>a {
-        display: block;
+        color: white;
+		display: block;
         width: 100px;
         height: 100px;
         line-height: 100px;
@@ -602,7 +603,7 @@
         background: -webkit-linear-gradient(-45deg, #fff 0, #edecec 100%);
         background: -o-linear-gradient(-45deg, #fff 0, #edecec 100%);
         background: -ms-linear-gradient(-45deg, #fff 0, #edecec 100%);
-        background: linear-gradient(135deg, #fff 0, #edecec 100%);
+        background: rgba(0,0,0,0.5);
         filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#edecec', GradientType=1)
     }
     .site-header .header-top .header-menu>ul>li.active>a {
