@@ -25,11 +25,11 @@ CREATE TABLE `akses` (
   `id_pemakai` int(11) DEFAULT NULL,
   `id_menu` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 /*Data for the table `akses` */
 
-insert  into `akses`(`id`,`id_pemakai`,`id_menu`) values (1,1,1),(2,1,2);
+insert  into `akses`(`id`,`id_pemakai`,`id_menu`) values (1,1,1),(2,1,2),(3,1,3);
 
 /*Table structure for table `akses_menu` */
 
@@ -44,11 +44,11 @@ CREATE TABLE `akses_menu` (
   `induk` tinyint(4) NOT NULL DEFAULT '0',
   `icon` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 /*Data for the table `akses_menu` */
 
-insert  into `akses_menu`(`id`,`urutan`,`nama`,`url`,`level`,`induk`,`icon`) values (1,1,'Manajemen Menu','#','1',0,'fa fa-th'),(2,1,'Kategori','./modules/view/master-data/kategori.php','2',1,'-');
+insert  into `akses_menu`(`id`,`urutan`,`nama`,`url`,`level`,`induk`,`icon`) values (1,1,'Manajemen Menu','#','1',0,'fa fa-th'),(2,1,'Kategori','./modules/view/master-data/kategori.php','2',1,'-'),(3,2,'Gambar','./modules/view/master-data/gambar.php','2',1,'-');
 
 /*Table structure for table `img` */
 
@@ -60,7 +60,7 @@ CREATE TABLE `img` (
   `nama` varchar(100) DEFAULT NULL,
   `deskripsi` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=394 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=398 DEFAULT CHARSET=latin1;
 
 /*Data for the table `img` */
 
@@ -74,13 +74,14 @@ CREATE TABLE `kategori` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_menu` int(11) DEFAULT NULL,
   `nama` varchar(50) DEFAULT NULL,
+  `summary` text,
   `hapus` varchar(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
 
 /*Data for the table `kategori` */
 
-insert  into `kategori`(`id`,`id_menu`,`nama`,`hapus`) values (1,1,'MODERN COLLECTIONS','0'),(2,1,'CRAFT COLLECTIONS','0'),(3,1,'RECYCLE PINE - WHITE','0'),(4,1,'RECYCLE PINE - IRON','0'),(5,1,'RECYCLE PINE - GRAY','0'),(6,1,'CLASSIC COLLECTION - CING','0'),(7,1,'CLASSIC COLLECTION - MING','0'),(8,2,'HOME - BEDROOM','0'),(9,2,'HOME - KITCHEN SET','0'),(10,2,'HOME - LIVING AND FAMILY','0'),(11,2,'HOME - OTHERS','0'),(12,2,'HOTEL','0'),(13,2,'OFFICE','0'),(14,3,'HOME - BEDROOM ','0'),(15,3,'HOME - KITCHEN SET','0'),(16,3,'HOME - LIVING AND FAMILY','0'),(17,3,'HOME - KIDS AND YOUTH','0'),(18,3,'CAFE AND RESTO','0'),(19,3,'OFFICE','0'),(20,2,'Tes23','1');
+insert  into `kategori`(`id`,`id_menu`,`nama`,`summary`,`hapus`) values (1,1,'MODERN COLLECTIONS',NULL,'0'),(2,1,'CRAFT COLLECTIONS',NULL,'0'),(3,1,'RECYCLE PINE - WHITE',NULL,'0'),(4,1,'RECYCLE PINE - IRON',NULL,'0'),(5,1,'RECYCLE PINE - GRAY',NULL,'0'),(6,1,'CLASSIC COLLECTION - CING',NULL,'0'),(7,1,'CLASSIC COLLECTION - MING',NULL,'0'),(8,2,'HOME - BEDROOM',NULL,'0'),(9,2,'HOME - KITCHEN SET',NULL,'0'),(10,2,'HOME - LIVING AND FAMILY',NULL,'0'),(11,2,'HOME - OTHERS',NULL,'0'),(12,2,'HOTEL',NULL,'0'),(13,2,'OFFICE',NULL,'0'),(14,3,'HOME - BEDROOM ',NULL,'0'),(15,3,'HOME - KITCHEN SET',NULL,'0'),(16,3,'HOME - LIVING AND FAMILY',NULL,'0'),(17,3,'HOME - KIDS AND YOUTH',NULL,'0'),(18,3,'CAFE AND RESTO',NULL,'0'),(19,3,'OFFICE',NULL,'0'),(20,2,'Tes23',NULL,'1'),(21,1,'Tes24','bbb','1');
 
 /*Table structure for table `log_login` */
 
@@ -93,7 +94,7 @@ CREATE TABLE `log_login` (
 
 /*Data for the table `log_login` */
 
-insert  into `log_login`(`tgl`,`id_user`) values ('2015-12-10 08:09:01',1),('2015-12-10 08:09:52',1);
+insert  into `log_login`(`tgl`,`id_user`) values ('2015-12-10 08:09:01',1),('2015-12-10 08:09:52',1),('2015-12-10 10:33:54',1),('2015-12-17 10:00:13',1);
 
 /*Table structure for table `menu_public` */
 

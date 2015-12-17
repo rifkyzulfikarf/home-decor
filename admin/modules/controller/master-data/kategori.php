@@ -13,7 +13,8 @@
 						$detail = array();
 						array_push($detail, $rs["nama_menu"]);
 						array_push($detail, $rs["nama_kategori"]);
-						array_push($detail, "<button type='button' class='btn btn-sm btn-primary' id='btn-ubah-data' data-id='".$rs["id"]."' data-nama='".$rs["nama_kategori"]."'>
+						array_push($detail, $rs["summary"]);
+						array_push($detail, "<button type='button' class='btn btn-sm btn-primary' id='btn-ubah-data' data-id='".$rs["id"]."' data-nama='".$rs["nama_kategori"]."' data-summary='".$rs["summary"]."'>
 									<i class='fa fa-pencil'></i></button> 
 									<button type='button' class='btn btn-sm btn-danger' id='btn-hapus-kategori' data-id='".$rs["id"]."'><i class='fa fa-trash-o'></i></button>");
 						array_push($collect, $detail);
@@ -25,9 +26,10 @@
 			case "tambah-kategori":
 				$arr=array();
 				
-				if (isset($_POST['txt-nama']) && $_POST['txt-nama'] != "" && isset($_POST['cmb-menu']) && $_POST['cmb-menu'] != "") {
+				if (isset($_POST['txt-nama']) && $_POST['txt-nama'] != "" && isset($_POST['cmb-menu']) && $_POST['cmb-menu'] != "" && 
+				isset($_POST['txt-summary']) && $_POST['txt-summary'] != "") {
 					
-					if ($result = $kategori->tambah($_POST['cmb-menu'], $_POST['txt-nama'])) {
+					if ($result = $kategori->tambah($_POST['cmb-menu'], $_POST['txt-nama'], $_POST['txt-summary'])) {
 						$arr['status']=TRUE;
 						$arr['msg']="Data tersimpan..";
 					} else {
@@ -45,9 +47,9 @@
 				$arr=array();
 				
 				if (isset($_POST['txt-nama']) && $_POST['txt-nama'] != "" && isset($_POST['cmb-menu']) && $_POST['cmb-menu'] != "" && 
-					isset($_POST['txt-id']) && $_POST['txt-id'] != "") {
+					isset($_POST['txt-id']) && $_POST['txt-id'] != "" && isset($_POST['txt-summary']) && $_POST['txt-summary'] != "") {
 					
-					if ($result = $kategori->ubah($_POST['txt-id'], $_POST['cmb-menu'], $_POST['txt-nama'])) {
+					if ($result = $kategori->ubah($_POST['txt-id'], $_POST['cmb-menu'], $_POST['txt-nama'], $_POST['txt-summary'])) {
 						$arr['status']=TRUE;
 						$arr['msg']="Data tersimpan..";
 					} else {

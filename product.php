@@ -18,7 +18,13 @@
         	<div class="item col-md-4">
                 <div class="work-header type-one">
                     <h2 class="text-border">SUMMARY</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie cursus turpis, rutrum varius quam volutpat vel. Duis tempor scelerisque tellus a fringilla. Sed augue ex, ultricies at sagittis at, ultricies ut libero. Fusce eu laoreet lorem. Ut eleifend sapien ut erat ultrices scelerisque.</p>
+					<?php
+					$qSummary = "SELECT summary FROM kategori WHERE id = '".d_url($_GET['id'])."'";
+					if ($resSummary = $data->runQuery($qSummary)) {
+						$rsSummary = $resSummary->fetch_array();
+						echo "<p>".$rsSummary['summary']."</p>";
+					}
+					?>
                 </div>
             </div>
             <!-- Work Header End -->

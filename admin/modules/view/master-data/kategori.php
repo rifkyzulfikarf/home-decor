@@ -18,6 +18,7 @@
 								<tr>
 									<th>Menu</th>
 									<th>Nama</th>
+									<th>Summary</th>
 									<th></th>
 								</tr>
 							</thead>
@@ -28,6 +29,7 @@
 								<tr>
 									<th>Menu</th>
 									<th>Nama</th>
+									<th>Summary</th>
 									<th></th>
 								</tr>
 							</tfoot>
@@ -52,6 +54,9 @@
 					<input type="hidden" class="form-control" id="txt-id" name="txt-id">
 					<div class="form-group">
 						<input type="text" class="form-control" id="txt-nama" name="txt-nama" placeholder="Nama Kategori">
+					</div>
+					<div class="form-group">
+						<textarea class="form-control" id="txt-summary" name="txt-summary"></textarea>
 					</div>
 					<div class="form-group">
 						<select class="form-control" id="cmb-menu" name="cmb-menu">
@@ -106,6 +111,7 @@ $(document).ready(function(){
 		$('#apa').val('ubah-kategori');
 		$('#txt-id').val($(this).data('id'));
 		$('#txt-nama').val($(this).data('nama'));
+		$('#txt-summary').val($(this).data('summary'));
 	});
 	
 	$('#tabel-kategori').on('click', '#btn-hapus-kategori', function(ev){
