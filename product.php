@@ -22,7 +22,7 @@
 					$qSummary = "SELECT summary FROM kategori WHERE id = '".d_url($_GET['id'])."'";
 					if ($resSummary = $data->runQuery($qSummary)) {
 						$rsSummary = $resSummary->fetch_array();
-						echo "<p>".$rsSummary['summary']."</p>";
+						echo "<p>".stripslashes($rsSummary['summary'])."</p>";
 					}
 					?>
                 </div>
